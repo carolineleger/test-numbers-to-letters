@@ -134,11 +134,12 @@ function App() {
 
           {result.dollars && (
             <p className="text-center">
-              Your result is: <b>{result.dollars}</b> dollars{" "}
+              Your result is: <b>{result.dollars}</b> dollar
+              {result.dollars !== "one" && "s"}
               {result.cents && (
                 <span>
                   {" "}
-                  and <b>{result.cents}</b> cents
+                  and <b>{result.cents}</b> cent{result.cents !== "one" && "s"}
                 </span>
               )}
             </p>
